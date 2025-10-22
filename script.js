@@ -34,8 +34,28 @@ for (let i = 0; i < cars.length; i++) {
     
 }
 console.log(carsBenzina)
-console.log(carsDisel)
-console.log(carsOther)*/
+console.log(carsDiesel)
+console.log(carsOther)
+
+
+const carsBenzina = []
+const carsDiesel = []
+const carsOther =[]
+cars.forEach(function(element){
+    if(element.fuel == 'benzina'){
+        carsBenzina.push(element)
+    }else if(element.fuel == 'diesel'){
+        carsDiesel.push(element)
+    }else{
+        carsOther.push(element)
+    }
+})
+console.log(carsBenzina)
+console.log(carsDiesel)
+console.log(carsOther)
+
+
+*/
 
 const carsBenzina = cars.filter((el)=> (el.fuel == 'benzina') )
 console.log(carsBenzina)
@@ -43,3 +63,4 @@ const carsDiesel = cars.filter((el)=> (el.fuel == 'diesel') )
 console.log(carsDiesel)
 const carsOther = cars.filter((el)=> (el.fuel !== 'benzina' && el.fuel !== 'diesel') )
 console.log(carsOther)
+
